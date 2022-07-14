@@ -1,0 +1,2 @@
+문자열.toCharArray()	: 문자 함수 리턴
+문자열.charAt(index번호)	: index자리의 문자 리턴
