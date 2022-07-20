@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+class Main {
+	public String solution(int n, String str) {
+		int cnt = 0;
+		String answer = "";
+		str=str.substring(1);
+		String[] arry = str.split(" ");
+		StringBuilder stb = new StringBuilder();
+		
+		while(true) {
+			cnt++;
+			if(cnt>n) {
+				answer=answer.substring(1);
+				return answer;
+			}
+			stb.append(arry[cnt-1]);
+			answer+="\n"+stb.reverse().toString();
+			stb.setLength(0);
+		}
+	}
+	
+	public static void main(String[] args) {
+		Main T = new Main();
+		Scanner kb = new Scanner(System.in);
+		int n=kb.nextInt();
+		kb.nextLine();
+		String str="";
+		for(int i=0;i<n;i++) {
+			str+=" "+kb.nextLine();
+		}
+		System.out.println(T.solution(n, str));
+	}
+}
