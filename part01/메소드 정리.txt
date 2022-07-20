@@ -1,2 +1,8 @@
-문자열.toCharArray()	: 문자 함수 리턴
-문자열.charAt(index번호)	: index자리의 문자 리턴
+문자열.toCharArray()			: 문자 함수 리턴
+문자열.charAt(index)			: index자리의 문자 리턴
+문자열.substring(index)			: 문자열에서 index부터 끝까지 문자열 추출
+문자열.substring(처음index, 끝index)	: 문자열에서 처음index부터 끝index까지의 문자열만 추출
+
+StringBuilder 객체명 = new StringBuilder();
+객체명.append(넣을 문자열);			: 문자열을 StringBuilder에 넣어줌
+객체명.reverse()				: 문자열을 뒤집음
