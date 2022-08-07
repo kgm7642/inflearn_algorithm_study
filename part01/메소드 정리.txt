@@ -3,9 +3,13 @@
 문자열.substring(index)			: 문자열에서 index부터 끝까지 문자열 추출
 문자열.substring(처음index, 끝index)	: 문자열에서 처음index부터 끝index까지의 문자열만 추출
 문자열.indexOf(문자)			: 문자열에 문자가 있는 맨앞의 인덱스 리턴
+문자열.replaceAll("[^A-Z]", "");		: 문자열에서 A부터 Z가 아닌 문자는 ""으로 대체해줌(^ 아님 표시)
 
 StringBuilder 객체명 = new StringBuilder();
 객체명.append(넣을 문자열);			: 문자열을 StringBuilder에 넣어줌
 객체명.reverse()				: 문자열을 뒤집음
 
 String.valueOf(char 배열);		: char 배열을 문자열로 만들어줌
+
+
+
