@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+class Main {
+	public int solution(String str) {
+		String answer = "";
+		char[] arry = str.toCharArray();
+		for(int i=0; i<arry.length; i++) {
+			if(!Character.isAlphabetic(arry[i])) {
+				answer += arry[i];
+			}
+		}
+		return Integer.parseInt(answer);
+	}
+	
+	public static void main(String[] args) {
+		Main T = new Main();
+		Scanner kb = new Scanner(System.in);
+		String str = kb.nextLine();
+		System.out.println(T.solution(str));
+	}
+}
