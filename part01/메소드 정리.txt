@@ -7,3 +7,5 @@
 StringBuilder 객체명 = new StringBuilder();
 객체명.append(넣을 문자열);			: 문자열을 StringBuilder에 넣어줌
 객체명.reverse()				: 문자열을 뒤집음
+
+String.valueOf(char 배열);		: char 배열을 문자열로 만들어줌
