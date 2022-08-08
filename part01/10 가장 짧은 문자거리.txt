@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+class Main {
+	public int[] solution(String s, String t) {
+		int[] answer = new int[s.length()];
+		int p = 1000;
+		for(int i=0; i<s.length(); i++) {
+			if(s.toCharArray()[i]==t.charAt(0)) {
+				p=0;
+				answer[i] = p;
+			}else {
+				answer[i] = ++p;
+			}
+		}
+		for(int i=s.length()-1; i>=0; i--) {
+			if(s.toCharArray()[i]==t.charAt(0)) {
+				p=0;
+				answer[i] = p;
+			}else {
+				answer[i]=p<answer[i]?++p:answer[i];
+			}
+		}
+
+		return answer;
+	}
+	
+	public static void main(String[] args) {
+		Main T = new Main();
+		Scanner kb = new Scanner(System.in);
+		String s = kb.next();
+		String t = kb.next();
+		for(int x : T.solution(s, t)) {
+			System.out.print(x+" ");
+		}
+	}
+}
