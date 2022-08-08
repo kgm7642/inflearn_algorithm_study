@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+class Main {
+	public String solution(String s) {
+		String answer = "";
+		s += " ";
+		int cnt = 1;
+		for(int i=0; i<s.length()-1; i++) {
+			if(s.charAt(i)==s.charAt(i+1)) {
+				cnt++;
+			}else {
+				if(cnt==1) {
+					answer += s.charAt(i);
+				}else {					
+					answer += s.charAt(i)+""+cnt;
+				}
+				cnt = 1;
+			}
+		}
+		return answer;
+	}
+	
+	public static void main(String[] args) {
+		Main T = new Main();
+		Scanner kb = new Scanner(System.in);
+		String s = kb.next();
+		System.out.println(T.solution(s));
+	}
+}
