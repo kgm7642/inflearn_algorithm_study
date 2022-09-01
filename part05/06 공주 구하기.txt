@@ -1,0 +1,30 @@
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+
+class Main {
+	public int solution(int n, int k) {
+		Queue<Integer> queue = new LinkedList<Integer>();
+		for(int i=0; i<n; i++) {
+			queue.offer(i+1);
+		}
+		
+		while(queue.size()!=1) {
+			for(int i=0; i<k; i++) {
+				if(k-1==i) {
+					queue.poll();
+				} else {					
+					queue.offer(queue.poll());
+				}
+			}
+		}
+		return queue.element();
+	}
+	public static void main(String[] args) {
+		Main T = new Main();
+		Scanner kb = new Scanner(System.in);
+		int n = kb.nextInt();
+		int k = kb.nextInt();
+		System.out.println(T.solution(n, k));
+	}
+}
