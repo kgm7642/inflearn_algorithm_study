@@ -1,0 +1,15 @@
+public class Main2 {
+	public void solution(int n) {
+		String answer = "";
+		if(n==0) return;
+		else {
+			solution(n/2);
+			System.out.print(n%2);
+		}
+	}
+	
+	public static void main(String[] args) {
+		Main2 T = new Main2();
+		T.solution(11);
+	}
+}
