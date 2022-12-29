@@ -1,0 +1,33 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+class Main {	
+	public List<Integer> solution(int n, int[] arr) {
+		List<Integer> answer = new ArrayList<Integer>();
+		
+		for(int i=0; i<n; i++) {
+			int tmp = 1;
+			for(int j=0; j<n; j++) {
+				if(arr[i] < arr[j]) {
+					tmp++;
+				}
+			}
+			answer.add(tmp);
+		}
+		return answer;
+	}
+	
+	public static void main(String[] args) {
+		Main T = new Main();
+		Scanner kb = new Scanner(System.in);
+		int n = kb.nextInt();
+		int[] arr = new int[n];
+		for(int i=0; i<n; i++) {
+			arr[i] = kb.nextInt();
+		}
+		for(int x : T.solution(n, arr)) {
+			System.out.print(x + " ");
+		}
+	}
+}
